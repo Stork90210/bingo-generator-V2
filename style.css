@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     border: solid black;
     margin: 50px;
+    justify-content: center;
 }
 
 .sub-div {

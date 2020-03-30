@@ -1,6 +1,6 @@
 //https://websematics.uk/tools/image-to-data-uri-converter
 
-const width = 800;
+const width = 900;
 const height = width;
 let numberSquares = 5
 let counter = 0;
@@ -112,10 +112,11 @@ function setDivListener() {
     subDivs = document.querySelectorAll(`.sub-div`);
     subDivs.forEach(subDiv => subDiv.addEventListener(`mousedown`, colorSubDiv));
     subDivs.forEach(subDiv => subDiv.addEventListener(`long-press`, NoColorSubDiv));
+    subDivs.forEach(subDiv => subDiv.addEventListener(`dblclick`, NoColorSubDiv));
 }
 
 function colorSubDiv(e) {
-    this.style.backgroundColor = `rgb(164,214,94,0.3)`   
+    this.style.backgroundColor = `rgb(164,214,94,0.6)`   
 }
 
 function NoColorSubDiv(e) {
@@ -148,10 +149,9 @@ function preload(){
 }
 
 window.onbeforeunload = function() {
-    return "Door deze pagina te verlaten verlies je jouw huidige bingokaart. Weet je zeker dat je dit wil?";
+    return
   };
 
 subArray = getRandomSubarray(imageFiles, 25);
 preload();
 generateDivs();
-

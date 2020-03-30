@@ -110,8 +110,8 @@ function generateDivs() {
 
 function setDivListener() {
     subDivs = document.querySelectorAll(`.sub-div`);
-    subDivs.forEach(subDiv => subDiv.addEventListener(`click`, colorSubDiv));
-    subDivs.forEach(subDiv => subDiv.addEventListener(`dblclick`, NoColorSubDiv));
+    subDivs.forEach(subDiv => subDiv.addEventListener(`mousedown`, colorSubDiv));
+    subDivs.forEach(subDiv => subDiv.addEventListener(`long-press`, NoColorSubDiv));
 }
 
 function colorSubDiv(e) {
@@ -154,3 +154,4 @@ window.onbeforeunload = function() {
 subArray = getRandomSubarray(imageFiles, 25);
 preload();
 generateDivs();
+

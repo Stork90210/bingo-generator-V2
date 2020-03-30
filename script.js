@@ -122,7 +122,7 @@ function setDivListener() {
 }
 
 function colorSubDiv(e) {
-    this.style.backgroundColor = `rgb(164,214,94,0.6)`   
+    this.style.backgroundColor = `rgb(132,189,0,0.5)`   
 }
 
 function NoColorSubDiv(e) {
@@ -155,6 +155,7 @@ function preload(){
 }
 
 window.onbeforeunload = function() {
+    
     return
   };
 

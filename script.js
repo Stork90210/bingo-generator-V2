@@ -1,3 +1,5 @@
+//https://websematics.uk/tools/image-to-data-uri-converter
+
 const width = 800;
 const height = width;
 let numberSquares = 5
@@ -109,11 +111,17 @@ function generateDivs() {
 function setDivListener() {
     subDivs = document.querySelectorAll(`.sub-div`);
     subDivs.forEach(subDiv => subDiv.addEventListener(`click`, colorSubDiv));
+    subDivs.forEach(subDiv => subDiv.addEventListener(`dblclick`, NoColorSubDiv));
 }
 
 function colorSubDiv(e) {
     this.style.backgroundColor = `rgb(164,214,94,0.3)`   
 }
+
+function NoColorSubDiv(e) {
+    this.style.backgroundColor = `rgb(0,0,0,0)`   
+}
+
 
 function clearGrid() {
     subDivs.forEach(subDiv => subDiv.remove());

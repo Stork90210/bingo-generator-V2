@@ -1,9 +1,13 @@
-//https://websematics.uk/tools/image-to-data-uri-converter
+/*!
+ * prototype-bingo-generator-letsquiz - v2
+ * Online bingokaarten generator
+ * https://www.letsquiz.nl
+ * @author Johan Bouwsema <www.shoebill.nl>
+ */
 
 const width = 900;
 const height = width;
 let numberSquares = 5
-let counter = 0;
 let subArray = []
 let imgArray = []
 var imageFiles = [
@@ -94,8 +98,6 @@ parentDiv.appendChild(container);
 
 
 function generateDivs() {
-    randomSubArray = getRandomSubarray(imageFiles, 25);
-    counter = 0;
     for (i = 0; i < numberSquares; i++) {
         for (j = 0; j < numberSquares; j++) {
             let subDiv = document.createElement(`div`);
@@ -103,7 +105,7 @@ function generateDivs() {
             subDiv.className = 'sub-div'
             subDiv.style.width = `${(width / numberSquares)}px`;
             subDiv.style.height = `${(height / numberSquares)}px`;
-            if (j + i * numberSquares == 12) {
+            if (j + i * numberSquares == ((numberSquares * numberSquares)-1)/2 && numberSquares%2 !==0) {
                 subDiv.style.backgroundImage = `url("${letsQuizLogo}")`;
             } else {
                 subDiv.style.backgroundImage = `url("${subArray[j + i * numberSquares]}")`;
@@ -147,18 +149,13 @@ function getRandomSubarray(arr, size) {
 }
 
 function preload(){
-    for (i = 0; i < 25; i++) {
+    subArray = getRandomSubarray(imageFiles, numberSquares * numberSquares);
+    for (i = 0; i < numberSquares * numberSquares; i++) {
         image = new Image();
         image.src = subArray[i];
         imgArray.push(image);          
     }
 }
 
-window.onbeforeunload = function() {
-    
-    return
-  };
-
-subArray = getRandomSubarray(imageFiles, 25);
 preload();
 generateDivs();

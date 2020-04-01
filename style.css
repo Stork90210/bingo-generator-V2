@@ -3,30 +3,16 @@
     font-family: Absara-sans; 
     src: url("fonts/AbsaraSans-Regular.otf");
 }
-@font-face { 
-    font-family: Absara-sans; 
-    src: url("fonts/AbsaraSans-Bold.otf");
-    font-weight: bold;
-}
+
 @font-face { 
     font-family: Absara-sans; 
     src: url("fonts/AbsaraSans-RegularItalic.otf");
     font-weight: italic, oblique;
-}
+}/* Einde font imports */
 
-/* Set basic elements */
-h1 {
-    font-family: Absara-sans, arial, sans-serif;
-    font-weight: bold;
-    color: white;
-    font-size: 62px;
 
-}
 
-footer > p {
-    font-family: Absara-sans, arial, sans-serif;
-    color: whitesmoke;
-}
+
 
 /* Page components */
 html {
@@ -39,15 +25,14 @@ body {
     margin: 0;
     height: 100%;
 }
+/* Einde page components */
 
-footer{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(242,243,248,1);
-    align-items: center;
-    box-shadow: 0 -4px 6px rgba(0,0,0,.2); 
-    box-shadow: 0 50vh 0 50vh  rgba(242,243,248,1);
-}
+
+
+
+
+
+/* Bingo kaart */
 
 #main-container {
     display: flex;
@@ -73,7 +58,14 @@ footer{
     min-width: 950px;
 }
 
-header {
+/* Einde Bingo kaart */
+
+
+
+  
+/*Header & menu*/
+
+  header {
     padding: 20px 0;
     background-color: rgba(242,243,248,1);
     box-shadow: 0 4px 6px rgba(0,0,0,.2);
@@ -144,3 +136,24 @@ nav a:hover {
   nav li:hover {background: rgba(0,0,0,.1);}
   nav a:after {content: none;}
   }
+
+  /* Einde header & menu */
+
+  
+  
+  
+  
+  
+  /* Footer */
+  
+  footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(242,243,248,1);
+    align-items: center;
+    box-shadow: 
+      0 -4px 6px rgba(0,0,0,.2),
+      0 50vh 0 50vh  rgba(242,243,248,1);
+}
+
+/* Footer */

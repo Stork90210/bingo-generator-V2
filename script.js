@@ -124,11 +124,11 @@ function setDivListener() {
 }
 
 function colorSubDiv(e) {
-    this.style.backgroundColor = `rgb(132,189,0,0.5)`   
+    this.style.backgroundColor = `rgb(132,189,0,1)`   
 }
 
 function NoColorSubDiv(e) {
-    this.style.backgroundColor = `rgb(0,0,0,0)`   
+    this.style.backgroundColor = `rgb(255,255,255,1)`   
 }
 
 

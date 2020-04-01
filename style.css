@@ -1,8 +1,42 @@
+/* Import fonts Let's Quiz */
+@font-face { 
+    font-family: Absara-sans; 
+    src: url("fonts/AbsaraSans-Regular.otf");
+}
+@font-face { 
+    font-family: Absara-sans; 
+    src: url("fonts/AbsaraSans-Bold.otf");
+    font-weight: bold;
+}
+@font-face { 
+    font-family: Absara-sans; 
+    src: url("fonts/AbsaraSans-RegularItalic.otf");
+    font-weight: italic, oblique;
+}
+
+/* Set basic elements */
+h1 {
+    font-family: Absara-sans;
+    font-weight: bold;
+    color: white;
+    font-size: 62px;
+}
+
+
+
+/* Page components */
+body {
+    margin: 0;
+    background-image: url("images/Bingokaarten2000x1200.jpg");
+}
+
 header{
     display: flex;
     justify-content: center;
-    height: 200px;
-    background-color: #84bd00;
+    height: 150px;
+    width: 100vw;
+    background-color: #492f91;
+    position: fixed;
 }
 
 #main-container {
@@ -10,13 +44,14 @@ header{
     flex-wrap: wrap;
     border: solid black;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 200px; 
 }
 
 .sub-div {
     box-sizing: border-box;
     border: 1px dashed black;
     background-size: 100% 100%;
+    background-color: white;
 
 }
 

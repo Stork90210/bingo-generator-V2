@@ -5,7 +5,7 @@
 }
 
 @font-face { 
-    font-family: Absara-sans; 
+    font-family: Absara-sans-italic; 
     src: url("fonts/AbsaraSans-RegularItalic.otf");
     font-weight: italic, oblique;
 }/* Einde font imports */
@@ -24,7 +24,9 @@ body {
     flex-direction: column;
     margin: 0;
     height: 100%;
+    font-family: Absara-sans, arial, sans-serif;
 }
+
 /* Einde page components */
 
 
@@ -104,7 +106,7 @@ body {
   }
   nav a {
     text-decoration: none;
-    font-family: Absara-sans, arial, sans-serif;
+    font-family: Absara-sans-italic, arial, sans-serif;
     font-size: 20px;
     display: block;
     position: relative;

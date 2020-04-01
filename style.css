@@ -16,27 +16,33 @@
 
 /* Set basic elements */
 h1 {
-    font-family: Absara-sans;
+    font-family: Absara-sans, arial, sans-serif;
     font-weight: bold;
     color: white;
     font-size: 62px;
+
 }
 
-
+footer > p {
+    font-family: Absara-sans, arial, sans-serif;
+    color: whitesmoke;
+}
 
 /* Page components */
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    background-image: url("images/Bingokaarten2000x1200.jpg");
 }
 
-header{
+footer{
     display: flex;
     justify-content: center;
     height: 150px;
     width: 100vw;
-    background-color: #492f91;
-    position: fixed;
+    background-color: rgba(242,243,248,1);
+    align-items: center;
+    box-shadow: 0 -4px 6px rgba(0,0,0,.2); 
 }
 
 #main-container {
@@ -44,7 +50,8 @@ header{
     flex-wrap: wrap;
     border: solid black;
     justify-content: center;
-    margin-top: 200px; 
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .sub-div {
@@ -61,3 +68,74 @@ header{
     width: auto;
     min-width: 950px;
 }
+
+header {
+    padding: 20px 0;
+    background-color: rgba(242,243,248,1);
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);  
+  }
+
+.container {
+    padding: 0 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    
+  }
+  .logo-box {
+    float: left;
+    margin-right: 20px;
+  }
+  .logo-box a {
+    outline: none;
+    display: block;
+  }
+  .logo-box img {display: block;}
+  nav {
+    overflow: hidden;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  nav li {
+    display: inline-block;
+    margin-left: 25px;
+    height: 70px;
+    line-height: 70px;
+    transition: .5s linear;
+  }
+  nav a {
+    text-decoration: none;
+    font-family: Absara-sans, arial, sans-serif;
+    display: block;
+    position: relative;
+    color: #868686;
+    text-transform: uppercase;
+  }
+nav a:hover {
+    color: black;
+}
+  
+  @media screen and (max-width: 660px) {
+    header {text-align: center;}
+    .logo-box {
+      float: none;
+      display: inline-block;
+      margin: 0 0 16px 0;
+    }
+    ul {float: none;}
+    nav li:first-of-type {margin-left: 0;}
+  }
+  @media screen and (max-width: 550px) {
+  nav {overflow: visible;}
+  nav li {
+    display: block;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+  }
+  nav li:hover {background: rgba(0,0,0,.1);}
+  nav a:after {content: none;}
+  }

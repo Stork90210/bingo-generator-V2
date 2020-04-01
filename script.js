@@ -106,9 +106,9 @@ function generateDivs() {
             subDiv.style.width = `${(width / numberSquares)}px`;
             subDiv.style.height = `${(height / numberSquares)}px`;
             if (j + i * numberSquares == ((numberSquares * numberSquares)-1)/2 && numberSquares%2 !==0) {
-                subDiv.style.backgroundImage = `url("${letsQuizLogo}")`;
+                subDiv.style.content = `url("${letsQuizLogo}")`;
             } else {
-                subDiv.style.backgroundImage = `url("${subArray[j + i * numberSquares]}")`;
+                subDiv.style.content = `url("${subArray[j + i * numberSquares]}")`;
             }
             container.appendChild(subDiv);
         }
@@ -124,12 +124,13 @@ function setDivListener() {
 }
 
 function colorSubDiv(e) {
-    this.style.backgroundColor = `rgb(132,189,0,1)`   
+    this.style.backgroundColor = `rgb(120,190,32,1)`   
 }
 
 function NoColorSubDiv(e) {
     this.style.backgroundColor = `rgb(255,255,255,1)`   
 }
+
 
 
 function clearGrid() {
@@ -159,3 +160,7 @@ function preload(){
 
 preload();
 generateDivs();
+
+//window.onbeforeunload = function() {
+//    return "you can not refresh the page";
+//}

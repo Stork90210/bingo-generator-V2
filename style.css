@@ -29,20 +29,24 @@ footer > p {
 }
 
 /* Page components */
+html {
+  height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    height: 100%;
 }
 
 footer{
     display: flex;
     justify-content: center;
-    height: 150px;
-    width: 100vw;
     background-color: rgba(242,243,248,1);
     align-items: center;
     box-shadow: 0 -4px 6px rgba(0,0,0,.2); 
+    box-shadow: 0 50vh 0 50vh  rgba(242,243,248,1);
 }
 
 #main-container {
@@ -72,7 +76,7 @@ footer{
 header {
     padding: 20px 0;
     background-color: rgba(242,243,248,1);
-    box-shadow: 0 4px 6px rgba(0,0,0,.2);  
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
   }
 
 .container {
@@ -109,6 +113,7 @@ header {
   nav a {
     text-decoration: none;
     font-family: Absara-sans, arial, sans-serif;
+    font-size: 20px;
     display: block;
     position: relative;
     color: #868686;

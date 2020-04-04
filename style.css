@@ -27,6 +27,10 @@ body {
     font-family: Absara-sans, arial, sans-serif;
 }
 
+p {
+  font-size: 22px;
+}
+
 /* Einde page components */
 
 
@@ -42,7 +46,7 @@ body {
     border: solid black;
     justify-content: center;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .sub-div {
@@ -55,7 +59,9 @@ body {
 
 #main-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: auto;
     min-width: 950px;
 }

@@ -27,8 +27,11 @@ body {
     font-family: Absara-sans, arial, sans-serif;
 }
 
-p {
+#main-div > ul {
   font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  list-style: square;
 }
 
 /* Einde page components */

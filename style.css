@@ -28,9 +28,8 @@ body {
 }
 
 #main-div > ul {
-  font-size: 26px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  margin: 20px;
   list-style: square;
   line-height: 34px;
 }
@@ -68,6 +67,12 @@ body {
     align-items: center;
     width: auto;
     min-width: 950px;
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+  
 }
 
 /* Einde Bingo kaart */

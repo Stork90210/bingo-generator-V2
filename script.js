@@ -7,8 +7,8 @@
 
 const width = 900;
 const height = width;
-const numberSquaresW = 4;
-const numberSquaresH = 6;
+const numberSquaresW = 5;
+const numberSquaresH = 5;
 let subArray = []
 let imgArray = []
 const imageFiles = [
@@ -91,7 +91,7 @@ function generateDivs() {
             subDiv.className = 'sub-div'
             subDiv.style.width = `${(width / numberSquaresW)}px`;
             subDiv.style.height = `${(height / numberSquaresW)}px`;
-            if (j + i * numberSquaresW == 0 || j + i * numberSquaresW == 3 || j + i * numberSquaresW == 20 || j + i * numberSquaresW == 23) {
+            if (j + i * numberSquaresW == 0 || j + i * numberSquaresW == 4 || j + i * numberSquaresW == 20 || j + i * numberSquaresW == 24 || j + i * numberSquaresW == 12) {
                 subDiv.style.content = `url("${letsQuizLogo}")`;
             } else {
             

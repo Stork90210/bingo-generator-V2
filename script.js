@@ -7,7 +7,8 @@
 
 const width = 900;
 const height = width;
-const numberSquares = 4;
+const numberSquaresW = 4;
+const numberSquaresH = 6;
 let subArray = []
 let imgArray = []
 const imageFiles = [
@@ -83,17 +84,22 @@ parentDiv.appendChild(container);
 
 
 function generateDivs() {
-    for (i = 0; i < numberSquares; i++) {
-        for (j = 0; j < numberSquares; j++) {
+    for (i = 0; i < numberSquaresH; i++) {
+        for (j = 0; j < numberSquaresW; j++) {
             let subDiv = document.createElement(`div`);
-            subDiv.id = "sub-div-id" + (j + i * numberSquares)
+            subDiv.id = "sub-div-id" + (j + i * numberSquaresW)
             subDiv.className = 'sub-div'
-            subDiv.style.width = `${(width / numberSquares)}px`;
-            subDiv.style.height = `${(height / numberSquares)}px`;
-            if (j + i * numberSquares == ((numberSquares * numberSquares)-1)/2 && numberSquares%2 !==0) {
+            subDiv.style.width = `${(width / numberSquaresW)}px`;
+            subDiv.style.height = `${(height / numberSquaresW)}px`;
+            if (j + i * numberSquaresW == 0 || j + i * numberSquaresW == 3 || j + i * numberSquaresW == 20 || j + i * numberSquaresW == 23) {
                 subDiv.style.content = `url("${letsQuizLogo}")`;
             } else {
-                subDiv.style.content = `url("${subArray[j + i * numberSquares]}")`;
+            
+            
+            // if (j + i * numberSquares == ((numberSquares * numberSquares)-1)/2 && numberSquares%2 !==0) {
+            //     subDiv.style.content = `url("${letsQuizLogo}")`;
+            // } else {
+                subDiv.style.content = `url("${subArray[j + i * numberSquaresW]}")`;
             }
             container.appendChild(subDiv);
         }
@@ -135,8 +141,8 @@ function getRandomSubarray(arr, size) {
 }
 
 function preload(){
-    subArray = getRandomSubarray(imageFiles, numberSquares * numberSquares);
-    for (i = 0; i < numberSquares * numberSquares; i++) {
+    subArray = getRandomSubarray(imageFiles, numberSquaresW * numberSquaresH);
+    for (i = 0; i < numberSquaresW * numberSquaresH; i++) {
         image = new Image();
         image.src = subArray[i];
         imgArray.push(image);          
@@ -146,6 +152,6 @@ function preload(){
 preload();
 generateDivs();
 
-window.onbeforeunload = function() {
-    return "you can not refresh the page";
-}
+// window.onbeforeunload = function() {
+//     return "you can not refresh the page";
+// }

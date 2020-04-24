@@ -193,3 +193,13 @@ nav a:hover {
 #donate:hover {
   background-color: #D14423;
 }
+
+@media print {
+  #donate {
+    display: none;
+  }
+
+  .nonprint {
+    display: none;
+  }
+}

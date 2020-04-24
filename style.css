@@ -177,3 +177,19 @@ nav a:hover {
 }
 
 /* Footer */
+
+#donate {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background-color: rgb(120,190,23);
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 70px;
+  text-decoration: none;
+  width: 600px;
+}
+
+#donate:hover {
+  background-color: #D14423;
+}
